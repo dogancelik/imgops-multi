@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://imgops.com/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>ImgOps Multi</title>
+  <script src="index.js"></script>
+</head>
+  <div class="container">
+    <div class="item">
+      <table id="top">
+        <tr>
+          <td>
+            <span id="title"><span>I</span>mg<span>O</span>ps</span>
+            <span id="subtitle">Multi</span>
+            <a id="help" href="https://github.com/dogancelik/imgops-multi#help">need help</a>
+          </td>
+          <td>
+            <!-- URL -->
+            <form action="https://imgops.com/start.asp" id="imgform" target="main">
+              <input id="url" name="url" autofocus="" type="text" placeholder="Image URL">
+            </form>
+          </td>
+          <td>
+            <!-- File -->
+            <form enctype="multipart/form-data" method="POST" action="https://imgops.com/upload/uploadPhoto-action.asp" target="main">
+              <input name="photo" id="photo" onchange="document.forms[1].submit()" type="file">
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="item">
+      <iframe src="" frameborder="0" name="main" id="imgops"></iframe>
+    </div>
+  </div>
+</html>
